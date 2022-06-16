@@ -10,17 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 import ace.project.dao.StudentDao;
 
 /**
- * Servlet implementation class StudentFetchController
+ * Servlet implementation class StudentDeleteController
  */
-@WebServlet("/StudentFetchController")
-public class StudentFetchController extends HttpServlet {
+@WebServlet("/StudentDeleteController")
+public class StudentDeleteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
 	StudentDao dao = new StudentDao();
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StudentFetchController() {
+    public StudentDeleteController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,8 +30,8 @@ public class StudentFetchController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		dao.fetchStudentBack(request);
-		response.sendRedirect("http://localhost:8080/MvcProject/editStudent.jsp");
+		dao.deleteStudent(request);
+		response.sendRedirect("http://localhost:8080/MvcProject/studentInfo.jsp");
 	}
 
 	/**
