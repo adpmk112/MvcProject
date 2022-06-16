@@ -86,4 +86,40 @@ public class StudentDao extends HttpServlet {
     		}
     	}
     }
+    
+    @SuppressWarnings("unchecked")
+	public void fetchStudentBack(HttpServletRequest request) {
+    	List<Student>updateList = new ArrayList<>();
+    	updateList = (List<Student>) request.getServletContext().getAttribute("studentList");
+    	int fetchId = Integer.parseInt(request.getParameter("fetchId"));
+
+    	Iterator<Student>it = updateList.iterator();
+    	while(it.hasNext()) {
+    		Student student = it.next();
+    		if(student.getId() == fetchId) {
+    			request.getServletContext().setAttribute("fetch", student);
+    		}
+    	}
+    }
+    
+    @SuppressWarnings("unchecked")
+	public void updateStudent(HttpServletRequest request) {
+    	List<Student>updateList = new ArrayList<>();
+    	updateList = (List<Student>) request.getServletContext().getAttribute("studentList");
+    	
+    	Student student = (Student) request.getServletContext().getAttribute("fetch");
+    	
+    	Iterator<Student>it = updateList.iterator();
+    	while(it.hasNext()) {
+    		Student iteraStud = it.next();
+    		if(iteraStud.getId() == student.getId()) { 
+    			iteraStud.setName(request.getParameter("updateName")); 
+    			iteraStud.setBirth(request.getParameter("updateBirth")); 
+    			iteraStud.setGender(request.getParameter("updateGender")); 
+    			iteraStud.setPhone(request.getParameter("updatePhone"));
+    			iteraStud.setEducation(request.getParameter("updateEducation")); 
+    			iteraStud.setAttend(request.getParameterValues("updateAttend"));
+    		}
+    	}
+    }
 }

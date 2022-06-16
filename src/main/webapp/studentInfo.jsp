@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="ace.project.dao.*"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,7 +89,7 @@
                     <td>${data.name}</td>
                     <td>Need to update</td>
             <td>
-              <a href="STU002.html"><button type="submit" class="btn btn-secondary mb-2">See More</button></a>
+              <a href="StudentFetchController?fetchId=${data.id}"><button type="submit" class="btn btn-secondary mb-2">See More</button></a>
               <!-- <a href="STU002.html" class="text-decoration-none">See more</a> -->
             </td>
           </tr>
