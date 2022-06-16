@@ -7,13 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ace.project.dao.StudentDao;
+
 /**
  * Servlet implementation class StudentUpdateController
  */
 @WebServlet("/StudentUpdateController")
 public class StudentUpdateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
+	StudentDao dao = new StudentDao();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -27,7 +30,8 @@ public class StudentUpdateController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		dao.updateStudent(request);
+		response.sendRedirect("http://localhost:8080/MvcProject/studentInfo.jsp");
 	}
 
 	/**

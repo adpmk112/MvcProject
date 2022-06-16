@@ -12,7 +12,7 @@ import ace.project.dao.StudentDao;
 /**
  * Servlet implementation class StudentUpdateController
  */
-@WebServlet("/StudentUpdateController")
+@WebServlet("/StudentSearchController")
 public class StudentSearchController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	StudentDao dao = new StudentDao();

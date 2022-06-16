@@ -119,6 +119,7 @@ public class StudentDao extends HttpServlet {
     			iteraStud.setPhone(request.getParameter("updatePhone"));
     			iteraStud.setEducation(request.getParameter("updateEducation")); 
     			iteraStud.setAttend(request.getParameterValues("updateAttend"));
+    			request.getServletContext().setAttribute("studentList", updateList);	
     		}
     	}
     }

@@ -27,7 +27,7 @@
         <div class="container">
             <div class=row>        
                 <div class="col-md-5 ">
-            <a href="MNU001.html"><h3>Student Registration</h3></a>
+            <a href="studentRegister.jsp"><h3>Student Registration</h3></a>
         </div>  
         <div class="col-md-6">
             <p>User: USR001 Harry</p>
@@ -48,8 +48,8 @@
         
             <div class="dropdown-container">
           <a href="BUD003.html">Course Registration </a>
-          <a href="STU001.html">Student Registration </a>
-          <a href="USR003.html">Student Search </a>
+          <a href="studentRegister.jsp">Student Registration </a>
+          <a href="studentInfo.html">Student Search </a>
         </div>
         <a href="USR003.html">Users Management</a>
       </div>
