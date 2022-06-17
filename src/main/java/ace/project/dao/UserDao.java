@@ -37,7 +37,6 @@ public class UserDao extends HttpServlet {
     
     public User newUser(User user,HttpServletRequest request) {
     	user.setId(auto.increment()); 
-    	user.setName(request.getParameter("name")); 
 		return user; 
     }
 
@@ -74,7 +73,7 @@ public class UserDao extends HttpServlet {
     	Iterator<User>it = updateList.iterator();
     	while(it.hasNext()) {
     		User user = it.next();
-    		if(user.getName().equals(name)) {
+    		if(user.getEmail().equals(name)) {
     			request.getServletContext().setAttribute("iterator", user);
     		}
     	}

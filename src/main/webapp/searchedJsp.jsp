@@ -53,7 +53,7 @@
       </div>
       <div class="main_contents">
     <div id="sub_content">
-      <form class="row g-3 mt-3 ms-2" action="StudentUpdateController" method="get">
+      <form class="row g-3 mt-3 ms-2" action="StudentSearchController" method="get">
         <div class="col-auto">
           <label for="staticEmail2" class="visually-hidden">studentID</label>
           <input type="text"  class="form-control" id="staticEmail2" placeholder="Student ID" name="studentId">
